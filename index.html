@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FLEXBOX | Introducción</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        section {
+            width: 400px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .caja1 {
+            background: blue;
+        }
+        
+        .caja2 {
+            background: green;
+        }
+        
+        .caja3 {
+            align-self: flex-end;
+            background: purple;
+        }
+        
+        .imagen {
+            width: 600px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Section sería el padre (flex container) -->
+    <h3>Regla 1: Flexbox necesita 1 padre y al menos 1 hijo.</h3>
+    <ul>
+        <li>El padre es un flex container. <b>display: flex;</b></li>
+        <li>El hijo es flex item.</li>
+    </ul>
+    <h3>Regla 2: Flexbox container tiene 2 ejes (x, y).</h3>
+    <p>- El flex container lleva la propiedad:</p>
+    <ul>
+        <li><b>flex-direction: row;</b> // Horizontal por default</li>
+        <li><b>flex-direction: column;</b>// Vertical</li>
+        <li><b>flex-direction: column-reverse;</b>// Vertical 3-2-1</li>
+        <li><b>flex-direction: row-reverse;</b>// Horizontal 3-2-1</li>
+    </ul>
+    <h3>Regla 3: Se puede permitir el salto de columnas con flex-wrap.</h3>
+    <ul>
+        <li><b>flex-wrap: nowrap;</b> // por default</li>
+        <li><b>flex-wrap: wrap;</b> // Salta a la siguiente fila</li>
+        <li><b>flex-wrap: wrap-reverse;</b> // Salta al revés 3-2-1</li>
+    </ul>
+    <h3>Regla 4: Alinear elementos en el eje elegido como principal con justify-content.</h3>
+    <ul>
+        <li><b>justify-content: flex-start;</b> // por default</li>
+        <li><b>justify-content: flex-end;</b> // al final </li>
+        <li><b>justify-content: center;</b> // Centrado</li>
+        <li><b>justify-content: space-around;</b></li>
+        <li><b>justify-content: space-between;</b> // distribución proporcional</li>
+    </ul>
+    <h3>Regla 5: Alinear elementos en el eje secundario con align-item.</h3>
+    <ul>
+        <li><b>align-item: stretch;</b> // por default</li>
+        <li><b>align-item: baseline;</b> // </li>
+        <li><b>align-item: center;</b> // Centrado</li>
+        <li><b>align-item: flex-start;</b> // </li>
+        <li><b>align-item: flex-end;</b> // </li>
+    </ul>
+    <h3>Regla 6: Alinear los flex items individualmente en el eje secundario con align-self (sobreescribe).</h3>
+    <ul>
+        <li><b>align-self: stretch;</b> // por default</li>
+        <li><b>align-self: baseline;</b> // </li>
+        <li><b>align-self: center;</b> // Centrado</li>
+        <li><b>align-self: flex-start;</b> // </li>
+        <li><b>align-self: flex-end;</b> // </li>
+    </ul>
+    <h3>Regla 7: Los flex items ignoran propiedades de CSS como:</h3>
+    <ul>
+        <li><b>float</b></li>
+        <li><b>clear</b></li>
+        <li><b>vertical-align</b></li>
+    </ul>
+    <h3>Regla 8: Cambiar el tamaño de los flex items:</h3>
+    <ul>
+        <li><b>flex-grow</b></li>
+        <li><b>flex-shrink</b></li>
+        <li><b>flex-basis</b></li>
+    </ul>
+    <img class="imagen" src="./assets/img/properties.jpg" alt="properties">
+    <section>
+        <article class="caja1">Hijo 1 (flex item)</article>
+        <article class="caja2">Caja 2 (flex item)</article>
+        <article class="caja3">Caja 3 (flex item)</article>
+    </section>
+</body>
+
+</html>
